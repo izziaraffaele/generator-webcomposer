@@ -1,6 +1,6 @@
 # generator-silex-app 
 
-> [Yeoman](http://yeoman.io) generator for a Silex based web app. It creates a simple web application based on Silex PHP framework with 2 routes ("/login", "/signup"). It also includes React, browserify, SASS support, Bootstrap and gulp.
+> [Yeoman](http://yeoman.io) generator for a WebComposer app. It creates a skelethon for a Silex application adding React, Gulp and browserify to work also with frontend.
 
 ## What's inside?
 
@@ -14,13 +14,9 @@ Bundled:
 * Reactify - Help to transform JSX
 * watchify support!
 * livereload (BrowserSync)
-
-Optional:
-
 * Sass with Compass
 * Bootstrap - Twitter Bootstrap's official Sass version
 * Modernizr
-* Jest for unit tests
 
 ## Getting Started
 
