@@ -1,4 +1,4 @@
-# generator-silex-app 
+# WebComposer Generator
 
 > [Yeoman](http://yeoman.io) generator for a WebComposer app. It creates a skelethon for a Silex application adding React, Gulp and browserify to work also with frontend.
 
