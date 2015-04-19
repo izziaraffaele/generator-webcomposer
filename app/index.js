@@ -62,6 +62,7 @@ var Generator = yeoman.generators.Base.extend({
     },
     app: function () {
         this.template('_package.json', 'package.json',{'projectName':this.projectName});
+        this.copy('gitignore', '.gitignore');
     }
 });
 

@@ -1,0 +1,5 @@
+/node_modules/
+/vendor/
+/.phpintel/
+/.sass-cache/
+composer.lock
