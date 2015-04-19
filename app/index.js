@@ -53,10 +53,10 @@ var Generator = yeoman.generators.Base.extend({
         }.bind(this));
     },
     templates: function() {
-        this.composeWith('silex-skelethon', { projectName:this.projectName},{
+        this.composeWith('silex-skelethon', {options:{projectName:this.projectName}},{
             local: require.resolve('generator-silex-skelethon')
         });
-        this.composeWith('webcomposer-frontend', { projectName:this.projectName},{
+        this.composeWith('webcomposer-frontend', {options:{projectName:this.projectName}},{
             local: require.resolve('generator-webcomposer-frontend')
         });
     },
