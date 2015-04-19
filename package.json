@@ -41,6 +41,7 @@
   "peerDependencies": {
     "yo": ">=1.0.0",
     "generator-silex-skelethon": "*",
-    "generator-webcomposer-frontend": "*"
+    "generator-webcomposer-frontend": "*",
+    "generator-webcomposer-modules": "*"
   }
 }

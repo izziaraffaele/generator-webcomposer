@@ -11,6 +11,8 @@ var Generator = yeoman.generators.Base.extend({
         this.on('end', function () {
             if (!this.options['skip-install']) {
                 this.installDependencies();
+                this.spawnCommand('composer', ['install']);
+                this.spawnCommand('chmod', ['-R','777','storage']);
             }
         });
     },
@@ -29,26 +31,18 @@ var Generator = yeoman.generators.Base.extend({
         },
         {
             type: 'checkbox',
-            name: 'features',
+            name: 'modules',
             message: 'What more would you like?',
             choices: [{
                 name: 'Auth system',
-                value: 'includeAuth',
+                value: 'Auth',
                 checked: true
             }]
         }];
 
         this.prompt(prompts, function (answers) {
-            var features = answers.features;
-
+            this.modules = answers.modules;
             this.projectName = answers.project || 'myApp';
-
-            function hasFeature(feat) { return features.indexOf(feat) !== -1; }
-
-            // manually deal with the response, get back and store the results.
-            // we change a bit this way of doing to automatically do this in the self.prompt() method.
-            this.includeAuth = hasFeature('includeAuth');
-
             done();
         }.bind(this));
     },
@@ -58,6 +52,9 @@ var Generator = yeoman.generators.Base.extend({
         });
         this.composeWith('webcomposer-frontend', {options:{projectName:this.projectName}},{
             local: require.resolve('generator-webcomposer-frontend')
+        });
+        this.composeWith('webcomposer-modules', {options:{projectName:this.projectName,modules:this.modules}},{
+            local: require.resolve('generator-webcomposer-modules')
         });
     },
     app: function () {
