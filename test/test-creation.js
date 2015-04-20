@@ -23,14 +23,16 @@ describe('web-composer', function () {
     ];
 
     helpers.mockPrompt(this.app, {
-        features: [
-          'includeAuth'
+        project: 'testApp',
+        modules: [
+          'Auth'
         ]
     });
 
     this.app.options['skip-install'] = true;
     this.app.run({}, function () {
       helpers.assertFile(expected);
+      console.log('ciao');
       done();
     });
   });

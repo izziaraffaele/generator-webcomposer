@@ -48,7 +48,7 @@
       ]
   },
   "browser": {
-      "jquery": "./assets/bower_components/jquery/dist/jquery.js"
+      "jquery": "./app/assets/bower_components/jquery/dist/jquery.js"
   },
   "browserify-shim": {
       "jquery": "$"
