@@ -12,7 +12,6 @@ var Generator = yeoman.generators.Base.extend({
             if (!this.options['skip-install']) {
                 this.installDependencies();
                 this.spawnCommand('composer', ['install']);
-                this.spawnCommand('chmod', ['-R','777','storage']);
             }
         });
     },
