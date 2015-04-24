@@ -46,14 +46,11 @@ var Generator = yeoman.generators.Base.extend({
         }.bind(this));
     },
     templates: function() {
-        this.composeWith('silex-skelethon', {options:{projectName:this.projectName}},{
-            local: require.resolve('generator-silex-skelethon')
-        });
         this.composeWith('webcomposer-frontend', {options:{projectName:this.projectName}},{
             local: require.resolve('generator-webcomposer-frontend')
         });
-        this.composeWith('webcomposer-modules', {options:{projectName:this.projectName,modules:this.modules}},{
-            local: require.resolve('generator-webcomposer-modules')
+        this.composeWith('webcomposer-backend', {options:{projectName:this.projectName,modules:this.modules}},{
+            local: require.resolve('generator-webcomposer-backend')
         });
     },
     app: function () {
