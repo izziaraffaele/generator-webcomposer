@@ -17,10 +17,12 @@
     "node": ">=0.10.0"
   },
   "keywords": [
-    "webcomposer",
+    "webpack",
     "silex",
     "yeoman-generator",
-    "gulp"
+    "gulp",
+    "react",
+    "browsersync"
   ],
   "author": {
     "name": "Izzia Raffaele",
