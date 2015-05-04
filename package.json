@@ -1,6 +1,6 @@
 {
   "name": "generator-webcomposer",
-  "version": "0.2.0",
+  "version": "1.0.0-0",
   "description": "A Yeoman Generator for a WebComposer app.",
   "main": "app/index.js",
   "scripts": {
