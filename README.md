@@ -10,13 +10,44 @@ Bundled:
 * Gulp
 * Bower
 * jQuery
-* Browserify
-* Reactify - Help to transform JSX
-* watchify support!
+* webpack
+* React
 * livereload (BrowserSync)
 * Sass with Compass
 * Bootstrap - Twitter Bootstrap's official Sass version
 * Modernizr
+
+## Folder structure
+
+Here a list of the most important files and folders the generator will build
+
+```
+.
++-- app
+|   +-- assets
+|   |   +-- images
+|   |   +-- scripts
+|   |   +-- styles
+|   +-- config
+|   |   +-- development
+|   |   +-- production
+|   |   |   +-- app.json
+|   |   +-- controllers.json
+|   |   +-- providers.json
+|   |   +-- routes.json
+|   +-- templates
+|   +-- views
++-- src
+|   +-- AppBundle
+|   |   +-- Controller
++-- web
+|   +-- index.php
++-- bower.json
++-- composer.json
++-- package.json
++-- gulpfile.json
++-- webpack.config.js
+```
 
 ## Getting Started
 
@@ -29,7 +60,9 @@ $ yo webcomposer                                   # ...and run it.
 You'll need to install it with `gem install sass`.
 If you find your css build results are empty, update your sass gem.
 
-Now, when everything is ready, run the `watch` task and begin to develop your application.
+Now, when everything is ready, run the `watch` task and begin to develop your application. This task will 
+make a first build of your assets and then watch for file changes.
+
 ```
 $ gulp watch
 ```
@@ -42,6 +75,7 @@ $ gulp dist
 
 How to run test?  
 Currently, I prefer to run test tasks from npm. Please run this command.
+
 ```
 $ npm test
 ```
